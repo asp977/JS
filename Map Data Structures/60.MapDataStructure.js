@@ -3,7 +3,7 @@
 
 > The JavaScript ES6 has introduced new data structure Map.
 
-> Map similar to objeccts in JavaScript that allowas us to store elements in a key/value pair.
+> Map similar to objects in JavaScript that allowas us to store elements in a key/value pair.
 
 > map is an iterable 
 
