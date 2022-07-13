@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>33 . Object Destructing </title>
+</head>
+<body>
+	<script type="text/javascript">
+		//object destructuring
+
+		const  Me =
+		{
+		 Name : "Akash",
+		 Age : "20",
+		 Class :"S.Y.CS",	 
+		};
+       
+
+       // Access direct with value in console statement
+		// let {Name ,Age,Class} = Me
+		// console.log(Name);
+		// console.log(Age);
+		// console.log(Class);
+
+		//Changing key name in object
+		let { Name :NewName , Age:NewAge, ...RestKeys} = Me;
+
+		console.log(NewName);
+		console.log(NewAge);
+		
+		console.log(RestKeys); //printing remaing key
+
+         // use in react
+		
+
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

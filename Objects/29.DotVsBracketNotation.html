@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>29.Dot Vs Bracket Notation.</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+
+        // creating object
+		const  me = 
+		{
+			name :'Akash',
+			age :20,
+			"person hobbies": ['Drawing','Sleeping']
+		};
+
+		/*
+
+		1. we can't  access 'person hobbies '  key using dot notation that  the reason we have to use bracket notation ( 'person hobbies ' without qutos it key consider it has 2 different word  because of space between them) that the reason we  use bracket notaion
+
+
+
+	*  Dot notation
+		accessing object using dot notation 
+		
+		console.log("Accessing object using dot notation");
+		
+		console.log(me.age);
+
+        console.log("");
+
+      *  Bracket notation
+		accessing object using bracket notation 
+		syntax : objectName["nmae_of_the_key"] (use always quots inside braket)
+		by default keys are in datatype in string thats the reason we you qutos
+
+		*/
+
+
+		console.log("Accessing object using bracket notation");
+		
+		console.log(me["person hobbies"]);
+
+		console.log("");
+
+		// adding key  value in object with bracket 
+		const AniChar = 
+		{
+			aot : "Erem Yeager",
+			onepiece :"Monkey D. Luffy"
+		}
+		const  ThisKey = "deadnote"; 
+
+		console.log("Before adding key value in object :",AniChar)
+
+        AniChar[ThisKey] = "Light Yagami";
+		console.log("After adding key value in object  :",AniChar)
+		
+
+	</script>
+	
+</body>
+</html>

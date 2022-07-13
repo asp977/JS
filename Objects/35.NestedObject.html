@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>35 . Nested Object </title>
+</head>
+<body>
+	<script type="text/javascript">
+		//object  insode array 
+
+		const Student = 
+		{
+		Name : "Akash",		
+		 Class :"10th",	
+		 Marks : { science : 90,maths : 80 }	
+		};
+
+		console.log(Student['Name']);
+		console.log(Student['Class']);
+        console.log(`Marks { science : ${Student.Marks.science} , maths : ${Student.Marks.maths} }` );
+
+
+        console.log("");
+
+        //Nested  Desturcturing
+
+        const Users = 
+		[
+
+		{UsersID : 101, FirstName : "Light", Series : "Dead Note"},
+		{UsersID : 102, FirstName : "Goku", Series : "DB"},
+		{UsersID : 103, FirstName : "Saitama", Series :"OPM"},
+		{UsersID : 104, FirstName : "Eren", Series : "AOT"}
+
+		];
+
+		//if i want to access UserID 102 and  Series name of UseeID 104
+
+		//const [ { } ,{UsersID,FirstName}  , { } , {Series} ]    = Users ;
+		 //       [ {0},   ,{ },  {3}  ] 
+
+		//console.log(UsersID,Series); //UserID  and Series
+		//console.log(FirstName);
+		//console.log(Series);
+
+
+
+		// print  FirstName of 103 and   102 of Series
+
+		const [ { }  , { Series} , {FirstName}, { } ]   = Users ;
+		console.log(Series,FirstName);
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

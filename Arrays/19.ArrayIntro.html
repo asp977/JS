@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>19. Array Intro</title>
+</head>
+<body>
+	<script type="text/javascript">
+        
+
+	// In JS Array is an objet that can be store multiple or similar datatype values in signle array.
+    // array is reference type
+    // u can access using indexing
+
+
+    //Creating Empty Array 
+    let MyEmptyArray=[];
+
+    // creating array uding array literal'[]'
+    //Array of String
+	let MyArray=["Eating","Working","Sleeping"];
+	console.log(MyArray);
+    
+    // creating arrray using javascript's 'new' keyword
+    // Array of numbers
+	let MyArray2= new Array(1,2,23,5);
+	console.log(MyArray2);
+
+	console.log("");  
+
+    //access array using indexing
+    console.log(`Access array using indexing`);
+	let fruits =["apple", "mango","grapes","banana"];
+	console.log(fruits);
+	console.log(fruits[3]);
+	console.log(fruits[1]);
+
+	console.log("");
+    
+    //Array with mixed datatypes
+    console.log(`Array with mixed datatypes`);
+    let MyMixedArray=[26,'string',433.5,false,null,undefined];
+    console.log(MyMixedArray);
+    console.log("typeof MyMixedArray : "+typeof MyMixedArray);
+    console.log(typeof MyMixedArray[2], MyMixedArray[2]);
+    console.log(typeof MyMixedArray[5], MyMixedArray[5]);
+    console.log(typeof MyMixedArray[3], MyMixedArray[3]);
+
+    console.log("");
+
+    //store arrays, functions and other objects inside an array
+    let Data=[[1,2],function Hello(){console.log("Hello")},{'Task':'Sleeping'}];
+    console.log(Data);
+    
+    console.log("");
+
+    console.log("Identify Array");
+    //identify Array is object is Array or not !
+    let fruit = ["grapes"];
+    let obj = {};
+    console.log("fruit :"+typeof fruit ,Array.isArray(fruit));
+    console.log("obj :"+typeof obj, Array.isArray(obj));
+
+
+	</script>
+	
+</body>
+</html>

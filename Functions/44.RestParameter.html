@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>44.Rest Parameters  in JS</title>
+	<script type="text/javascript">
+/*
+
+ES6 
+44.Rest Parameters  in JS
+-> rest parameter that has a prefix of three dots (...).
+-> a rest parameter allows you to represent an indefinite nmber of arguments as an array.
+-> syntax :
+function function_name(...args)  or (a, ...args) multiple parameters
+{
+	//function body;
+}
+
+-> Note : The rest operator be the last parameter to a function
+*/
+
+
+// Ex Check enter numbers are array or not using resr parameter
+function Numbers(...numbers)
+{
+	console.log(`Entered Array [${numbers}], it Array ? :${Array.isArray(numbers)}.`);
+}
+Numbers(1,2,3,4);
+
+console.log();
+
+// Ex Check enter numbers are array or not using resr parameter
+function Num(...nums)
+{
+	let  total = 0;
+	for (let elements of nums)
+	{
+		total = total + elements;
+	}
+	return total;
+}
+const ans = Num(5,4,3,2,1);
+console.log("total using rest parameter :",ans);
+
+
+	</script>
+
+
+</head>
+<body>
+	
+</body>
+</html>
+
+
+

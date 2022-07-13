@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>16. Do While Loop</title>
+<body>
+
+	<script type="text/javascript">
+
+        // Do while loop 
+        // the do while loop is similar to while loop but the condition is cheked after the loop body executed 
+        // this ensure that the loop body is run at least once.
+        // no matter the while condition is  repeated as long as a  is true ,do block execute at least once
+
+	    let a=0;
+
+        do
+        {
+            console.log(a);
+            a++;
+        }
+        while(a<5);
+       
+        //first loop check the do block and execute condition 0+0=0 and print 0 
+        //then go to while condition and check the condition o<5 is ture 
+        //then again go t0 the do block and execute loop 
+
+          //output
+          //0
+          //1
+          //2
+          //3
+          //4
+
+
+          console.log("");
+
+          let j=0;
+          do
+          {
+            if(j==3)
+            {
+              break;
+            }
+            console.log(j);
+            j++;            
+          }
+          while(true);
+
+          
+          
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

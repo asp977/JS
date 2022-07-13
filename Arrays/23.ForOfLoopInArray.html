@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>23.  Array using for of Loop</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+	let  Arr = ['a','b','c'];
+    let  ExtraArr = [];
+	let len = Arr.length;  // -1 for removing last  undefined element
+	for(let i=0; i<len; i++) // array always start with zero
+	{
+		//console.log(Arr[i]);
+		console.log(Arr[i].toUpperCase());
+		//ExtraArr.push(Arr[i].toUpperCase());
+		//document.write(Arr[i]+"<br>");
+
+	}
+	console.log("ExtraArr :" , ExtraArr);
+
+console.log("");
+
+  // for of  loop
+
+  // The for...of loop was introduced in the later versions of JavaScript ES6.
+
+  //syntax
+//      for (element of iterable) 
+//      {
+//       // body of for...of
+//      }
+
+// iterable - an iterable object (array, set, strings, etc).
+// element - items in the iterable
+
+ // What is iterable object ?
+ // -->  checking the values of  iterable objecet  one by one what is inside that. ex.array ,string ,maps, sets are iterable  objcet.
+
+	for(element of Arr)
+	{
+		console.log(element);
+	}	
+
+	</script>
+</body>
+</html>

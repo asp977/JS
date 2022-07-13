@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>20. Array Operation</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+     // Array is mutable (means changable)
+
+	// Array methods
+    // push() : adding elements at the end
+    // pop () : removing last elements of the array
+    // shift() : removing element in start of the array
+    // unshift()  : adding element in start of the array
+    //slice() : it will give the new or relplica array
+    //concat() joins two or more arrays and returns a result
+   
+    // push () method adding elements at the end
+	let MyArr = ["Eating","Working","Sleeping"];
+	console.log("Before  push method  :" ,MyArr);
+	MyArr.push("Exercise");
+	console.log("After  push method : ",MyArr);
+	
+
+	console.log("");
+
+     // pop () method removing last elements of the array
+    let Num=[1,2,23,5];
+    console.log("Before pop method :",Num);
+     const PopNum =Num.pop(Num)  
+    //for give return value
+	console.log("popped num is",PopNum);
+    console.log("After pop method :",Num);
+    
+    console.log("");
+     // unshift  :adding element in start of the array
+     let Arr=["Eren","Luffy"];
+     console.log("Before unshift method :",Arr);
+     Arr.unshift('Saitama',4);
+     console.log("After unshift :method :",Arr);
+
+
+    console.log("");
+    // if you need to remove the firdt element you can use the shift() method
+    // shift () method removing element in start of the array
+    // also returns the removed element.
+    let  aot=["Levi","Erwin","Annie","Zeke"];
+    console.log("Before shift method :",aot);
+    const reaot=Arr.shift(); 
+     //remove variable store in reaot
+    console.log("Remove element  is",reaot);
+    console.log("After unshift :method :",aot);
+
+     // push() and pop is fast  compaire to shift and unshift
+
+
+    console.log("");
+
+    //slice() : it will give the new or relplica array
+    let Arr1 = ['item1','item2'];
+    let Arr2 = Arr1;
+    console.log(Arr1===Arr2); // or console.log(Arr1==Arr2);
+    console.log("Arr1 :",Arr1);
+     
+     let  Arr3 = Arr1.slice(0);
+     console.log("Close of Arr1 is Arr3 :", Arr3)
+    
+    console.log("");
+
+     //concat() joins two or more arrays and returns a result
+    let Arr4 = [1,2,5];
+    let Arr5 =  Arr4.concat(Arr1,aot)
+    console.log("Arr5 ",Arr5);
+
+    console.log("");
+    //sort()  method sorts the elements alphabetically in strings and in ascending order
+    console.log("Before sorted Array : " ,aot);
+    console.log("After sorted Array : " ,aot.sort());
+  
+    console.log("");
+    //indexOf() method searches an element of an array and returns its position
+    //default is -1
+    console.log("Num :",Num);
+     const index = Num.indexOf(2)  
+    
+    console.log("index is:",index);
+
+    console.log("");
+
+    // spread operator   
+    // The spread operator is a new addition to the features available in the JavaScript ES6 version.
+
+     //-->The spread operator ( ...) is used to expand or spread an iterable or an array
+    let Arr6= [...Arr4];
+    console.log("Arr6 : ",Arr6);
+    
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

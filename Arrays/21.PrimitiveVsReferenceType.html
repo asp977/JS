@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>21.Primitive Type VS Reference Type</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+	// Primitive Type  (Pre build datatypes)
+		  // string,number,boolean,null,undefined,symbol,BigInt ,tc..
+		  // --> Memory location in stack
+    let num1 = 2;
+    let num2 = num1;
+    console.log("Value of num1 is", num1);
+    console.log("Value of num2 is", num2);
+    num1++;
+    console.log("After incrementing value of num1 ");
+    console.log("Value of num1 is", num1);
+    console.log("Value of num2 is", num2);
+
+    console.log("");
+
+
+	//Reference Type (it is object  datatypes)
+		// Array,object litrals,function ,dates ,set,map,etc...
+		    //--> heap means dynamic memory location
+		    //--> Memory location in heap
+		    //--> heap is part of the RAM Memory ,heap means dynamic memory location
+		    // Heap memory help you to create object and it is not fixed
+    let Arr1 = ['item1','item2'];
+    let Arr2 = Arr1;
+    console.log("Array1 : ",Arr1);
+    console.log("Array2 : ",Arr2);
+    Arr1.push('item3');
+    console.log("After pushing item in Arr1");
+    console.log("Array1 : ",Arr1);
+    console.log("Array2 : ",Arr2);
+
+    // both arr1 and arr2 has same pointer (means their address)  in stack  and address pointer to their  value stroe in heap that's the  reason it will give same output.
+
+    //working
+    //1. if  arr1 execute  then arr1 create pointer(address) in stack  and also address pointer to their store value in heap 
+
+    //2. after that arr2 will create new pointer above the  arr1 in stack 
+    //3.in stack both arr1 and arr2 has same address 
+
+    //4.Now for printing arr1 and arr2 , first  arr1 point to the address of the heap and  print the value stroe in that address and arr2 also print  with thier arr2  address.
+
+   //5.After pushing the element in arr1 address.now arr1 has 3 elements
+
+   //6. According to print  statement  arr1 and arr2  executed 
+  // both updated arr1 and arr2 has same pointer (means their address)  in stack  and address pointer to their  value stroe in heap that's the  reason it will give same output.
+
+
+
+    
+
+
+
+	</script>
+	
+</body>
+</html>

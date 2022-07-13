@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>32 . Spread Operator in Object </title>
+</head>
+<body>
+	<script type="text/javascript">
+
+
+         /*
+         ES6
+		Spread syntax can be used when all elements from an object or array need to be included in a list of some kind.
+
+		The spread operator is denoted by three dots (…).
+
+		he spread operator can be used to clone an iterable object or merge iterable objects into one.
+
+		spread operator  In Array
+        
+		const Arr1 = [1,2,3];
+		const Arr2 = [5,6,7];
+		const NewArr = [...Arr1,'asp',34]
+		console.log(NewArr);
+
+		const NewArray = [..."asp"];
+		console.log(`sperad operator in array  is [${NewArray}]`);
+		
+
+		console.log('');
+
+		*/
+
+		//spread operator in Object
+
+		const Obj1 =
+		{
+			k1 : "v1",
+			k2 : "v2",
+		};
+
+		console.log("Obj1" ,Obj1);
+
+		// k1 value overrwrite  by letast k1 value  in NewObj1
+
+		const NewObj1 =
+		{
+			k1 : "v1",
+			k2 : "v2",		
+			k1 : "v2.0",
+		};
+		console.log("NewObj1" ,NewObj1);
+
+		const Obj2 =
+		{
+			k1 : "1.0",
+			k3 : "v3",
+			k4 : "v4",
+		};
+		const  CombinesObj = { ...Obj2, ...Obj1, k5 :"v5"};
+		// object take latest value if both keys are  same
+
+		console.log("CombinesObj",CombinesObj)
+
+		
+		
+
+
+
+        
+
+
+
+
+	</script>
+	
+</body>
+</html>

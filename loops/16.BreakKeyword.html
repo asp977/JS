@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Break Keyword/Statement</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		//Break Keyword
+
+		//the break statement is used to terminate the immediately when it is encounteres.
+
+		//syntax:
+		//break [label];
+		//label statement it is rarly use and it is optinal
+
+		for (let i = 0; i <= 10; i++) 
+		{     
+			if (i === 5) //if i value is true then break condition
+			{
+				break;
+			}
+			console.log(i);
+		}
+
+
+		console.log("");
+
+		//nested for loop:
+
+        loop1: // label statement it is rarly use and it is optinal
+		for(let i=1;i<=2;i++)
+		{   
+			loop2:
+			for(let j=1;j<=3;j++)
+			{
+				if(i==2)
+				{
+					break loop2;
+				}
+				console.log(`i=${i} , j=${j}`);
+			}
+		}
+
+
+
+
+	</script>
+	
+</body>
+</html>

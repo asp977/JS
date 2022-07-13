@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>62.Optional Chaining.</title>
+</head>
+<body>
+<script>
+/*
+62.OptionalChaining.js
+
+> The optional chaining ‘?.’ is an error-proof way to access nested object properties, even if an intermediate property doesn’t exist
+
+> Syntax: 
+obj?.prop
+obj?.[expr]
+arr?.[index]
+func?.(args)
+
+*/
+
+//Ex1.
+const Person =
+{
+	//FirstName : 'asp_977',
+    Address : { HouseNo : '5164'},
+}
+
+console.log(Person?.FirstName);//asp_977
+console.log(Person?.Address);//undefined
+console.log(Person?.Address?.HouseNo);//
+</script>
+	
+</body>
+</html>

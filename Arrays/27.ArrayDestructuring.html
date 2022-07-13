@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=, initial-scale=1.0">
+	<title>27.  Array Destructuring</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		const  Arr = ["value0","value1","value2","value3"];
+		// let arr0 = arr[0];
+		// let arr1 = arr[1];
+		// console.log("valu of arr0 :",arr0);
+		// console.log("valu of arr1 :",arr1);
+
+		// console.log("");
+
+		//let [arr0, arr1] = Arr;
+		let [arr0, arr1,...NewArr] = Arr; 
+		// because of ...NewArr rest of the values printed
+		//let  NewArr =  Arr.slice(2);
+		console.log("value of arr0 :",arr0);
+	    console.log("value of arr1 :",arr1);
+	    console.log("NewArr :", NewArr)
+
+
+
+
+
+		
+	</script>
+	
+</body>
+
+</html>

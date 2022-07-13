@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>28.Objects Intro </title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*
+		In JS objects is a non-primitive/ reference datatype that allows you  to stroe multiple collection of datatype.
+
+		objects are good for real world data ,
+
+		object's don't have index 
+
+		Syntax :
+		const object_name = {  key1 : value1 , key2 : value2	};
+
+		In object each  member of an object is 'key : value' pair seprated by commas  & enclosed in curly braces  '{ }'.
+
+		key & values  pairs also called property
+
+		*/
+
+        // creating object
+		const person  = { name : 'asp' , age:'20'};
+
+		//Dot notation
+		//accessing object using dot notation 
+		// syntax : objectName.key
+		console.log("Accessing object using dot notation");
+		console.log(person.name);
+		console.log(person.age);
+
+         console.log("");
+
+         //Bracket notation
+		//accessing object using braket notation 
+		// syntax : objectName["nmae_of_the_key"] (use always quots inside braket)
+		// by default keys are in datatype in string thats the reason we you qutos
+		console.log("Accessing object using brake notation");
+		console.log(person["name"]); 
+		console.log(person['age']); 
+		
+
+         console.log("");
+
+		// creating array  inside object
+		const  me = 
+		{
+			name :'Akash',
+			age :20,
+			hobbies : ['Drawing','Cycling','Sleeping']
+		};
+		console.log(me);	
+		console.log(me.hobbies);
+
+		console.log("");
+
+		// adding key value pair to  object 
+		const AniChar = 
+		{
+			aot : "Erem Yeager",
+			onepiece :"Monkey D. Luffy"
+		}
+
+		console.log("Before adding key value pair in object :",AniChar)
+
+        AniChar.deathNote = "Light Yagami";
+		console.log("After adding key value pair in object :",AniChar)
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+	</script>
+	
+</body>
+</html>
