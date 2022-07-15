@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>65.Window & This keyword</title>
+</head>
+<body>
+	<script type="text/javascript">
+/* Window 
+> Winow is globally object ,which is created along with global ececution & global context whenever any JS program is run ,
+
+
+*/
+var a = 20;
+function Window()
+{
+	var a = 19;
+	console.log(window);
+	console.log(this);
+	console.log(this === window);
+} 
+Window();
+
+
+console.log()
+
+function MyFun()
+{
+	console.log(this);
+}
+window.MyFun();
+//outout>> window object
+
+
+console.log()
+
+function MyFun()
+{
+	console.log(this);
+}
+window.MyFun();
+//outout>> window object
+
+console.log()
+
+
+//> In a function, in strict mode, this is undefined.
+function MyFun()
+{
+	"use strict";
+	console.log(this);
+}
+MyFun();
+</script>
+	
+</body>
+</html>

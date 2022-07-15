@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,41 +8,27 @@
 <body>
 	<script type="text/javascript">
 /*63. methods.js
-
  > javascript methods
-
 > Objects can also contain functions
 > Basically JS method is an object property that has a function value
 
 */
 const User =
 {
-
 	Name: 'Akash',
 	Age : 20 ,
 	About : function( ) 
-				  { 
-				  	console.log( `User name is ${User.Name} and age is ${User.Age}.`);
-				  }
+	 { 
+	 	console.log( `User name is ${User.Name} and age is ${User.Age}.`);
+		console.log(this);
+	 }
 }
 
 User.About();
 </script>
-	</script>
-
+	
 </body>
 </html>
 
 
 
-
-
-
-<html>
-<body>
-<script>
-
-
-
-</html>
-<body>

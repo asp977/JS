@@ -3,29 +3,121 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>63.Methods</title>
+	<title>64.This keyword </title>
 </head>
 <body>
 	<script type="text/javascript">
 /*64.This Keyword .js
 
- > This Keyword 
+> This Keyword 
 
-> Objects can also contain functions
-> Basically JS method is an object property that has a function value
+> In JS ,This keyword refers to the object where it is called 
+
+> In an object method, this refers to the object. Default is global object
+
+> Alone, this refers to the global object.
+
+> In a function, this refers to the global object.
+
+> In a function, in strict mode, this is undefined.
+
+> In an event, this refers to the element that received the event.
+
+> Methods like call(), apply(), and bind() can refer this to any object.
 
 */
+
+
+function MyFun()
+{
+	console.log(this);
+}
+window.MyFun();
+//outout>> window object
+console.log();
+
+//=========================================
+
+//> Alone, this refers to the global object.
+function Sum()
+{
+	var add = 2+2; 
+	console.log("sum of two number is "+ add);
+	console.log(this);
+}
+Sum();
+// output : sum of two number is 4
+// Referes global object
+
+console.log();
+
+//=========================================
+
+//> In method ,this refers to answer to the owner object.
 const User =
 {
-
 	Name: 'Akash',
 	Age : 20 ,
 	About : function( ) 
-				  { 
-				  	console.log( `User name is ${User.Name} and age is ${User.Age}.`);
-				  }
+	 { 
+	 	console.log( `User name is ${User.Name} and age is ${User.Age}.`);
+		console.log(this);
+	 }
+}
+User.About();
+
+console.log();
+
+//=========================================
+
+//> In a function, in strict mode, this is undefined.
+function MyFun()
+{
+	"use strict";
+	console.log(this);
+}
+MyFun();
+
+console.log();
+
+//=========================================
+
+function UserInfo()
+{
+	console.log( `User name is ${this.Name} and age is ${this.Age}.`); 				
 }
 
-User.About();
+
+const User1 =
+{
+	Name: 'Akash',
+	Age : 20 ,
+	About : UserInfo
+}
+
+const User2 =
+{
+	Name: 'Vivek',
+	Age : 19 ,
+	About : UserInfo					  
+}
+
+const User3 =
+{
+	Name: 'Yash',
+	Age : 19 ,
+	About : UserInfo
+}
+
+User1.About();
+User2.About();
+User3.About();
+
+console.log();
+
+//
+
+
 </script>
-	</script>
+</body>
+</html>
