@@ -1,0 +1,38 @@
+<script type="text/javascript">
+	
+/*67. Apply()Methods  (Interview Questions)
+> apply() method is similar to call() method
+> this method takes argument as array
+*/
+
+//calling object method using another Object  with passing object as argument
+const RoleModel =
+{
+	Name : 'Akash',
+	Years :7,
+	Skills : 'Programming',
+	About : function( OtherSkills )
+	{
+		console.log(`${this.Name} is RoleModel for everyone & Also he develop their ${this.Skills} Skills from last ${this.Years} years + OtherSkills ${OtherSkills}`);
+	}
+};
+RoleModel.About();
+
+const RoleModelFollower =
+{
+	Name: 'Rohit',
+	Years : 2,
+	Skills : 'Magic'
+}
+RoleModel.About.apply( RoleModelFollower ,['Cycling','Singing']);
+// Here while calling the RoleModel & add RoleModel method 'About' & passing RoleModelFollower as argument and  other argumets in array 
+
+// same for global function also
+
+
+
+
+
+
+
+</script>

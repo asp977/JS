@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>66.Call().Method</title>
+</head>
+<body>
+	<script type="text/javascript">
+/*
+66.Call() Methods  (Interview Questions)
+
+//1.call() method
+ > the call( ) method is  a predefined method in JavaScript.
+ > In this method object can use the method belonging to another object
+ > Means ,one object access another object method 
+ > call() method takes arguments seprately.
+ 
+*/
+
+
+//Calling call() method with normal function
+function A()
+{
+	console.log(`Calling call() method with normal function`);
+}
+A.call();
+console.log();
+
+
+//calling object method using another Object  with passing object as argument
+const RoleModel =
+{
+	Name : 'Akash',
+	Years :7,
+	Skills : 'Programming',
+	About : function( )
+	{
+		console.log(`${this.Name} is RoleModel for everyone & Also he develop their ${this.Skills} Skills from last ${this.Years} years.`);
+	}
+};
+RoleModel.About();
+
+const RoleModelFollower =
+{
+	Name: 'Vivek',
+	Years : 2,
+	Skills : 'Hidden Study'
+}
+RoleModel.About.call( RoleModelFollower );
+// Here while calling the RoleModel & add RoleModel method 'About' & passing RoleModelFollower as argument in call() method 
+
+console.log();
+//---------------------------------------------
+
+
+const RoleModel1 =
+{
+	Name : 'Akash',
+	Years :2,
+	Skills : 'Programming',
+	About : function(Hobbies,)
+	{
+		console.log(`${this.Name} is RoleModel for everyone & Also he develop their ${this.Skills} Skills from last ${this.Years} years. + ${Hobbies}`);
+	}
+};
+
+RoleModel1.About();
+const RoleModelFollower1=
+{
+	Name: 'Yash',
+}
+RoleModel1.About.call( RoleModelFollower1,"Dancing,Trekking");
+//passing multiple arguments
+
+
+console.log();
+//---------------------------------------------
+
+// Accessing function using call() method  thorugh global function
+function GlobalFun()
+{
+	console.log(`${this.Name} is calling '${this.FunName}' using call() method in global scope`)
+}
+
+const User1 =
+{
+	Name : "Sunil",
+	FunName : "GlobalFun"
+}
+const User2 =
+{
+	Name : "Zoro",
+	FunName : "GlobalFun"
+}
+GlobalFun.call(User2);
+
+</script>
+</body>
+</html>
