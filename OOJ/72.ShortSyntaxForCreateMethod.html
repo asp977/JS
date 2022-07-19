@@ -1,0 +1,28 @@
+<script type="text/javascript">
+
+/*
+Normal syntax for create function inside the object
+const User =
+{
+	Name : "Akash",
+	Age : 20,
+	FunName : function()
+	{
+		console.log(`My name is ${this.Name} and age is ${this.Age}`);
+	}
+}
+*/
+
+// Short syntax for create function inside the object
+const User =
+{
+	Name : "Akash",
+	Age : 20,
+	FunName()
+	{
+		console.log(`My name is ${this.Name} and age is ${this.Age}`);
+	}
+}
+User.FunName.call(User); // User.FunName(User); or User.FunName();
+
+</script>

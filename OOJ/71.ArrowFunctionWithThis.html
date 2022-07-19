@@ -1,0 +1,26 @@
+<script type="text/javascript">
+
+const User =
+{
+	Name : "Akash",
+	Age : 20,
+	FunName: () =>
+	{
+		console.log(`My name is ${this.Name} and age is ${this.Age}`);
+	}
+}
+
+// in simple case
+User.FunName(User);
+
+// note : while calling User.FunName(); 'this' represent the window object not our user defined object
+
+User.FunName();// gives undefined values 
+
+// in simple case
+User.FunName(User);// gives undefined values 
+
+// You can't change this  value using any method this keyword only refer
+User.FunName.call(User);
+
+</script>

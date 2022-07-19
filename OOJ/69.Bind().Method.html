@@ -18,7 +18,6 @@ const RoleModel =
 		console.log(`${this.Name} is RoleModel for everyone & Also he develop their ${this.Skills} Skills from last ${this.Years} years + OtherSkills ${OtherSkills}`);
 	}
 };
-RoleModel.About();
 
 const RoleModelFollower =
 {
@@ -26,16 +25,23 @@ const RoleModelFollower =
 	Years : 2,
 	Skills : 'Magic'
 }
-const RoleModelFun = RoleModel.About.( RoleModelFollower ,'Cycling','Singing');
 
+//  calling without bind method
+const RoleModelFun = RoleModel.About; 
 RoleModelFun();
 
+// syntax for calling 
+// variable name = main_object_name.method/function_name.bind(object_name, arguments)
+//the bind( ) method takes an object as an first argument & create an a new function
+const RoleModelFun1= RoleModel.About.bind( RoleModelFollower ,'Cycling','Singing');
+RoleModelFun1();
 
 
-//  bind the global function with 
+
+//  bind the global function with multiple object
 function GlobalFun()
 {
-	console.log(`${this.Name} is calling '${this.FunName}' using call() method in global scope`)
+	console.log(`${this.Name} is calling '${this.FunName}' using bind() method `);
 }
 
 const User1 =
@@ -48,13 +54,8 @@ const User2 =
 	Name : "Zoro",
 	FunName : "GlobalFun"
 }
-GlobalFun.call(User2);
 
-
-
-
-
-
-
+const CallGlobalFun = GlobalFun.bind(User1);
+CallGlobalFun();
 
 </script>

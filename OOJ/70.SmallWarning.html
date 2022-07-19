@@ -1,0 +1,22 @@
+<script type="text/javascript">
+
+const User =
+{
+	Name : "Akash",
+	Age : 20,
+	FunName: function()
+	{
+		console.log(`My name is ${this.Name} and age is ${this.Age}`);
+	}
+}
+
+// const CallFun = User.FunName;
+// CallFun(); 
+// note : while calling CallFun() it will represent the window object not our user defined object
+// gives undefined values because  here we not call method yet
+
+const CallFun2 = User.FunName.bind(User);
+CallFun2();
+
+
+</script>
