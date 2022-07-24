@@ -1,0 +1,78 @@
+<script type="text/javascript">
+//73.create function to create multiple object
+
+
+/*
+const User =
+{
+	FirstName :'Eren',
+	LastName :'Yeager',
+	Contact :'ErenYeager266@gmail.com',
+	Age: 2,
+	Address : "House No, Colony ,Pincode",
+	About : function() 
+	{
+		return `${this.FirstName} is ${this.Age} years old.`;
+	}
+	AgeIs18 : function()
+	{
+		return this.Age >= 20;
+	}
+}
+
+
+
+
+1.Create function  that function create object 
+2.In that add key value pair
+3.Return the Object
+
+*/
+
+function CreateUser(FirstName,LastName,Email,Age,Address)
+{
+	const User = {}; //create empty object for addding ket values pair
+	User.FirstName = FirstName;
+	User.LastName = LastName;
+	User.Email = Email;
+	User.Age = Age;
+	User.Address = Address;
+	User.About = function()
+	{
+		return `${this.FirstName} is ${this.Age} years old.`;
+	}
+	User.AgeIs18 = function()
+	{
+		return this.Age >=18;
+	}
+	return User;
+}
+
+const NewUser = CreateUser('Eren' , 'Yeager' , 'erenyeager266@gmail.com' , 17 , 'Shiganshina');
+console.log(NewUser);
+const About = NewUser.About();
+console.log(About);
+const AgeIs18 = NewUser.AgeIs18();
+console.log(`User Age is more than 18 ? `+AgeIs18);
+
+
+const NewUser2 = CreateUser('Grisha' , 'Yeager' , 'grishayeager26@gmail.com' , 40 , 'Shiganshina');
+console.log(NewUser2);
+const About2= NewUser2.About();
+console.log(About2);
+const AgeIs18_2 = NewUser2.AgeIs18();
+ console.log(`User Age is more than 18 ? `+AgeIs18_2);
+
+
+
+
+/*
+if we create multiple users so we have to create multiple object and aslo create object methods
+In Ex. If we create 'NewUser ' variable then in that we have to pass arguments for function 'CreateUser' & function has  'About & AgeIs18' methods ,if we call the 'NewUser' it will return methods 'About & AgeIs18' in object & also same for  'NewUser2' 
+consider I have many user ,beacuse of many users object methods called & store repeated so our memory consumption is more,For avoiding memory consumption
+
+See the file (74.SolutionFor.73.File.html_
+
+*/
+
+</script>

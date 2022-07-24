@@ -1,0 +1,47 @@
+<script type="text/javascript">
+/*74.Solution for file No.74 Using Objeect.Create
+
+
+*/
+const UserMethods =
+{
+	About : function()
+	{
+		return `${this.FirstName} is ${this.Age} years old.`;
+	},
+	Is18 : function()
+	{
+		return `${this.FirstName} is more than 18 ? : ${this.Age >=18}`;
+	}
+}
+	
+
+function CreateUser(FirstName,LastName,Email,Age,Address)
+{
+	const User = {}; //create empty object for addding key values pair
+	User.FirstName = FirstName;
+	User.LastName = LastName;
+	User.Email = Email;
+	User.Age = Age;
+	User.Address = Address;
+	User.About = UserMethods.About;
+	User.Is18 = UserMethods.Is18;
+	return User;
+}
+
+const NewUser = CreateUser('Eren' , 'Yeager' , 'erenyeager266@gmail.com' , 17 , 'Shiganshina');
+const About = NewUser.About();
+console.log(NewUser.About());
+const AgeIs18 = NewUser.Is18();
+console.log(`${NewUser.Is18()}`);
+
+
+const NewUser2 = CreateUser('Grisha' , 'Yeager' , 'grishayeager26@gmail.com' , 40 , 'Shiganshina');
+const About2= NewUser2.About();
+console.log(NewUser2.About());
+const AgeIs18_2 = NewUser2.Is18();
+console.log(`${NewUser2.Is18()}`);
+
+
+
+</script>
