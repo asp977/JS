@@ -1,9 +1,27 @@
 <script type="text/javascript">
 //75.Solution for file No.74 Using Objeect.Crea
+/*
+const Obj1 =
+{
+	Key1 : 'value1',
+	Key2 : 'value2'
+}
+/*
+const Obj2 =
+{
+	Key3 : 'value3'
+}
+
+const Obj2 =Object.create(Obj1);
+Obj2.Key3 = 'value3' ;//add key in Obj2
+//there i s one another way to create empty object
+// console.log(Obj2.Key3);
+console.log(Obj2.__proto__);
+//Here we can't access the Obj1 keys using Obj2 
 
 
-
-
+__proto__ and [[prototype]] are same  but only prototype is different
+*/
 
 
 const UserMethods =
@@ -21,7 +39,7 @@ const UserMethods =
 
 function CreateUser(FirstName,LastName,Email,Age,Address)
 {
-	const User = {}; //create empty object for addding key values pair
+	const User = Object.create(UserMethods); //create __proto__ for reference
 	User.FirstName = FirstName;
 	User.LastName = LastName;
 	User.Email = Email;
@@ -45,5 +63,6 @@ console.log(NewUser2.About());
 const AgeIs18_2 = NewUser2.Is18();
 console.log(`${NewUser2.Is18()}`);
 
+console.log(NewUser2);
 
 </script>
