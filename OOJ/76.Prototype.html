@@ -1,0 +1,48 @@
+<script type="text/javascript">
+/*
+76.prototype
+
+>1. Javascript is a prototype based language ,so whenwver we   create a function using Javascript , javascript engine adds a prototype property inside a function
+
+>2. Prototpye property is basically object (also known as prototype object ), where can attach method  and properties in a prototype object,which enables all the other objects to inherit these methods and properties.
+
+>3. The Javascript prototype property allows you to add new properties to oboject consturctor.
+
+
+*/
+ 
+
+
+
+
+
+
+
+
+
+
+function hello()
+{
+	console.log('hello asp')
+}
+console.log(hello.prototype);
+
+// var hello = ['A','B','C']
+// const hello = 
+// {
+// 	K1: 'A',
+// 	K2 : 'B'
+// }
+
+
+//only function has prototype property
+if(hello.prototype)
+{
+	console.log("prototype is present")
+}
+else
+{
+	console.log("prototype is not present")
+}
+
+</script>

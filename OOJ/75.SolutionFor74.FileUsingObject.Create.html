@@ -3,26 +3,26 @@
 /*
 const Obj1 =
 {
-	Key1 : 'value1',
-	Key2 : 'value2'
+	K1 : 'value1',
+	K2 : 'value2'
 }
-/*
-const Obj2 =
-{
-	Key3 : 'value3'
-}
+
+// const Obj2 =
+// {
+// 	Key3 : 'value3'
+// }
 
 const Obj2 =Object.create(Obj1);
-Obj2.Key3 = 'value3' ;//add key in Obj2
+Obj2.K3 = 'value3' ;//add key in Obj2
 //there i s one another way to create empty object
-// console.log(Obj2.Key3);
-console.log(Obj2.__proto__);
-//Here we can't access the Obj1 keys using Obj2 
+console.log(Obj2);
+//__proto__ or [[prototype]] we can set proto  propertties of Obj1 to Obj2 using Object.create for obj2 and set the similar values as Obj1 in Obj2
 
 
-__proto__ and [[prototype]] are same  but only prototype is different
+//__proto__ and [[prototype]] are same  but only prototype is different
+
+
 */
-
 
 const UserMethods =
 {
@@ -55,9 +55,9 @@ const About = NewUser.About();
 console.log(NewUser.About());
 const AgeIs18 = NewUser.Is18();
 console.log(`${NewUser.Is18()}`);
+console.log(NewUser);
 
-
-const NewUser2 = CreateUser('Grisha' , 'Yeager' , 'grishayeager26@gmail.com' , 40 , 'Shiganshina');
+const NewUser2 = CreateUser('Grisha' , 'Yeager' , 'grishayeager26@gmail.com' , 35 , 'Shiganshina');
 const About2= NewUser2.About();
 console.log(NewUser2.About());
 const AgeIs18_2 = NewUser2.Is18();
