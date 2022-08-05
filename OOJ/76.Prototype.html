@@ -8,18 +8,7 @@
 
 >3. The Javascript prototype property allows you to add new properties to oboject consturctor.
 
-
-*/
  
-
-
-
-
-
-
-
-
-
 
 function hello()
 {
@@ -27,12 +16,12 @@ function hello()
 }
 console.log(hello.prototype);
 
-// var hello = ['A','B','C']
-// const hello = 
-// {
-// 	K1: 'A',
-// 	K2 : 'B'
-// }
+var hello = ['A','B','C']
+const hello = 
+{
+	K1: 'A',
+	K2 : 'B'
+}
 
 
 //only function has prototype property
@@ -44,5 +33,76 @@ else
 {
 	console.log("prototype is not present")
 }
+
+
+*/
+
+
+//75.Solution for file No.74 Using Objeect.Crea
+/*
+const Obj1 =
+{
+	K1 : 'value1',
+	K2 : 'value2'
+}
+
+// const Obj2 =
+// {
+// 	Key3 : 'value3'
+// }
+
+const Obj2 =Object.create(Obj1);
+Obj2.K3 = 'value3' ;//add key in Obj2
+//there i s one another way to create empty object
+console.log(Obj2);
+//__proto__ or [[prototype]] we can set proto  propertties of Obj1 to Obj2 using Object.create for obj2 and set the similar values as Obj1 in Obj2
+
+
+//__proto__ and [[prototype]] are same  but only prototype is different
+
+
+*/
+
+
+const UserMethods =
+{
+	About : function()
+	{
+		return `${this.FirstName} is ${this.Age} years old.`;
+	},
+	Is18 : function()
+	{
+		return `${this.FirstName} is more than 18 ? : ${this.Age >=18}`;
+	}
+}
+	
+
+function CreateUser(FirstName,LastName,Email,Age,Address)
+{
+	const User = Object.create(CreateUser.prototype);
+	User.FirstName = FirstName;
+	User.LastName = LastName;
+	User.Email = Email;
+	User.Age = Age;
+	User.Address = Address;
+	User.About = UserMethods.About;
+	User.Is18 = UserMethods.Is18;
+	return User;
+
+}
+
+CreateUser.prototype.About = function()
+{
+	return `${this.FirstName} is ${this.Age} years old.`;
+}
+CreateUser.prototype.About =function()
+{
+	return `${this.FirstName} is more than 18 ? : ${this.Age >=18}`;
+}
+
+const NewUser = CreateUser('Eren' , 'Yeager' , 'erenyeager266@gmail.com' , 17 , 'Shiganshina');
+const About = NewUser.About();
+const AgeIs18 = NewUser.Is18();
+
 
 </script>
